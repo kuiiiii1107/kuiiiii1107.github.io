@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>貓貓總站</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
+  <style>
+    /* 自訂導覽列的樣式 */
+    .navbar-custom {
+      background-color: #33384b;
+      /* 灰色背景顏色 */
+      margin-bottom: 0px;
+      /* 調整導覽列與 Hero Section 的距離 */
+    }
+
+    .navbar-custom .navbar-brand,
+    .navbar-custom .navbar-nav .nav-link {
+      color: #ffffff;
+      /* 白色字體顏色 */
+    }
+
+    /* Hero Section 的樣式 */
+    .hero-section {
+      background-image: url('background.png');
+      /* 背景圖片的路徑 */
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+      padding: 300px 0;
+      /* 調整上下間距 */
+      text-align: center;
+      color: #ffffff;
+      /* 白色字體顏色 */
+    }
+
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      /* 半透明灰色遮罩 */
+    }
+
+    .hero-section h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+      color: #ffffff;
+    }
+
+    .hero-section p {
+      font-size: 24px;
+      color: #ffffff;
+    }
+
+    /* About Section 的樣式 */
+    #about {
+      padding: 50px 0;
+      /* 調整上下間距 */
+    }
+
+    #about .lead {
+      margin-bottom: 20px;
+    }
+
+    #about .row {
+      margin-bottom: 40px;
+    }
+
+    #about .col-lg-4 {
+      margin-bottom: 30px;
+    }
+
+    #about .col-lg-4 img {
+      max-width: 100%;
+    }
+
+    #about .col-lg-7 {
+      margin-bottom: 30px;
+    }
+
+    #about .h1,
+    #about .h6 {
+      margin-bottom: 5px;
+    }
+
+    /* Card 的樣式 */
+    .card {
+      margin-bottom: 20px;
+      /* 調整 Card 之間的距離 */
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <!-- 導覽列 -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+      <div class="container-fluid">
+        <!-- 網站 LOGO -->
+        <a class="navbar-brand" href="https://www.youtube.com/watch?v=c6PGKV0C-Ok">
+          <img src="cat_image/logo.png" alt="網站 LOGO" height="40">
+        </a>
+
+        <!-- 導航按鈕 -->
+        <ul class="navbar-nav m1-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">首頁</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.youtube.com/watch?v=c6PGKV0C-Ok">關於我們</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.youtube.com/watch?v=c6PGKV0C-Ok">聯絡我們</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+
+  <section class="hero-section">
+    <div class="container">
+      <div class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="1000">
+            <h1 class="text-white">最紅的貓貓網站</h1>
+            <p class="text-white">你來對地方了</p>
+            <img src="cat_image/17.jpg" class="w-20" alt="...">
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <h1 class="text-white">最多內容的貓貓網站</h1>
+            <p class="text-white">酷斃了</p>
+            <img src="cat_image/6.jpg" class="w-20" alt="...">
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <h1 class="text-white">最新知識的貓貓網站</h1>
+            <p class="text-white">你看過那麼小的貓貓嗎？</p>
+            <img src="cat_image/4.png" class="w-20" alt="...">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 關於 -->
+  <section id="about" class="py-9 py-xl-12">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-4 mb-6 mb-lg-0">
+          <img class="img-fluid w-100 rounded-3x shadow-light-lg" src="cat_image/18.gif" alt="">
+        </div>
+        <div class="col-lg-7 offset-lg-1">
+          <h2 class="mb-4">Hi 歡迎來到貓貓總站</h2>
+          <p class="lead">一個分享貓咪的地方</p>
+          <p class="mb-8">這裡有各種貓貓和貓貓趣事，絕對為你帶來快樂，而且有誰會討厭充滿貓貓的網站呢？</p>
+          <div class="row m-n4">
+            <div class="col-6 col-md-4 p-4">
+              <p class="h1 text-primary mb-2">10 days</p>
+              <p class="h6 mb-0">本站創立時間</p>
+            </div>
+            <div class="col-6 col-md-4 p-4">
+              <p class="h1 text-primary mb-2">30k</p>
+              <p class="h6 mb-0">瀏覽次數</p>
+            </div>
+
+            <div class="col-6 col-md-4 p-4 d-none d-md-block">
+              <p class="h1 text-primary mb-2">15隻</p>
+              <p class="h6 mb-0">幫助過的貓貓</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 特點 -->
+  <section class="py-8 border-bottom" id="features">
+    <div class="container py-5 my-5">
+      <div class="row gx-5">
+        <div class="col-lg-4">
+          <div class="feature bg-gradient"><img src="cat_image/貓貓科普.jpg" height="100" alt="..."></div>
+          <h2 class="h4 fw-bolder">貓貓科普</h2>
+          <p>對貓貓不了解但想了解他們？，那就看這裡吧！</p>
+          <a class="text-decoration-none" href="https://zh.wikipedia.org/zh-tw/%E7%8C%AB">
+            點擊了解更多
+            <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+        <div class="col-lg-4 mb-5 mb-lg-0">
+          <div class="feature bg-gradient text-white rounded-3 mb-3"><img src="cat_image/貓貓迷因.png" height="100" alt="..."></div>
+          <h2 class="h4 fw-bolder">貓貓迷因</h2>
+          <p>各種貓貓迷因和有趣貓事，壓力太大？貓貓在這裡幫你紓壓。</p>
+          <a class="text-decoration-none" href="https://www.youtube.com/@meowthemall3318">
+            點擊了解更多
+            <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+        <div class="col-lg-4">
+          <div class="feature bg-gradient text-white rounded-3 mb-3"><img src="cat_image/貓貓家.jpg" height="100" alt="..."></div>
+          <h2 class="h4 fw-bolder">給浪貓一個家</h2>
+          <p>我們遇到浪貓該怎麼應對？該怎麼幫助他們？</p>
+          <a class="text-decoration-none" href="https://www.71706.com.tw/">
+            點擊了解更多
+            <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- 使用者回饋-->
+  <section class="py-5 border-bottom">
+    <div class="container px-5 my-5 px-5">
+      <div class="text-center mb-5">
+        <h2 class="fw-bolder">使用者回饋</h2>
+        <p class="lead mb-0">大家都愛貓貓！</p>
+      </div>
+      <div class="row gx-5 justify-content-center">
+        <div class="col-lg-6">
+          <!-- 使用者1-->
+          <div class="card mb-4">
+            <div class="card-body p-4">
+              <div class="d-flex">
+                <div class="flex-shrink-0"><img src="cat_image/user1.png" height="60" alt="..."></div>
+                <div class="ms-4">
+                  <p class="mb-1">這個網站讓我對貓有更多的認識</p>
+                  <div class="small text-muted">- Anyone001, 苗栗台灣</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 使用者2-->
+          <div class="card">
+            <div class="card-body p-4">
+              <div class="d-flex">
+                <div class="flex-shrink-0"><img src="cat_image/user2.jpg" height="60" alt="..."></i></div>
+                <div class="ms-4">
+                  <p class="mb-1">貓貓很讚</p>
+                  <div class="small text-muted">- QfgesjuTF3d, 屏東台灣</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 使用者3-->
+          <div class="card">
+            <div class="card-body p-4">
+              <div class="d-flex">
+                <div class="flex-shrink-0"><img src="cat_image/user3.jpg" height="60" alt="..."></i></div>
+                <div class="ms-4">
+                  <p class="mb-1">我覺得浪貓問題很重要，希望可以有更多人了解這個議題來幫助浪貓們</p>
+                  <div class="small text-muted">- ILOVETF2, 桃園台灣</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 貓圖 -->
+  <div class="row row-cols-1 row-cols-md-4 g-0">
+    <div class="col">
+      <div class="card">
+        <img src="cat_image/1.png" class="card-img-top" alt="...">
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="cat_image/2.png" class="card-img-top" alt="...">
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="cat_image/3.png" class="card-img-top" alt="...">
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="cat_image/4.png" class="card-img-top" alt="...">
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="cat_image/5.png" class="card-img-top" alt="...">
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="cat_image/6.jpg" class="card-img-top" alt="...">
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="cat_image/7.png" class="card-img-top" alt="...">
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="cat_image/8.jpg" class="card-img-top" alt="...">
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="cat_image/9.jpg" class="card-img-top" alt="...">
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="cat_image/10.jpg" class="card-img-top" alt="...">
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="cat_image/11.jpg" class="card-img-top" alt="...">
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="cat_image/12.jpg" class="card-img-top" alt="...">
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="cat_image/13.jpg" class="card-img-top" alt="...">
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="cat_image/14.jpg" class="card-img-top" alt="...">
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="cat_image/15.jpg" class="card-img-top" alt="...">
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="cat_image/16.jpg" class="card-img-top" alt="...">
+      </div>
+    </div>
+  </div>
+  
+
+  <!-- Footer-->
+  <footer class="py-5 bg-dark">
+    <div class="container px-4 px-lg-5">
+      <p class="m-0 text-center text-white">Copyleft &copy; 貓貓總站</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
